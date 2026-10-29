@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sneha Latha Vandavasi | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+section{
+    padding:80px 20px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:36px;
+}
+
+
+/* ===== HEADER ===== */
+header{
+    position:sticky;
+    top:0;
+    background:#0d0d0d;
+    border-bottom:1px solid #1f1f1f;
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:600;
+}
+
+.logo span{
+    background:linear-gradient(90deg,#ff6ec4,#7873f5);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+nav a{
+    margin:0 15px;
+    color:#bbb;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff6ec4;
+}
+
+.cta-btn{
+    padding:10px 22px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ff6ec4,#7873f5);
+    color:#fff;
+    font-weight:500;
+    box-shadow:0 0 15px rgba(255,110,196,0.6);
+}
+
+
+/* ===== HERO ===== */
+.hero{
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:linear-gradient(135deg,#0d0d0d,#111);
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero h1 span{
+    background:linear-gradient(90deg,#ff6ec4,#7873f5);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h3{
+    color:#bbb;
+    font-weight:400;
+    margin:15px 0;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#aaa;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin:15px 10px;
+    padding:12px 30px;
+    border:2px solid #ff6ec4;
+    color:#ff6ec4;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    background:linear-gradient(90deg,#ff6ec4,#7873f5);
+    color:#fff;
+    box-shadow:0 0 20px #ff6ec4;
+}
+
+
+/* ===== ABOUT ===== */
+.about p{
+    max-width:750px;
+    margin:auto;
+    text-align:center;
+    color:#ccc;
+}
+
+.about h3{
+    color:#ff6ec4;
+    margin-bottom:10px;
+}
+
+
+/* ===== EDUCATION & EXPERIENCE ===== */
+.edu-exp{
+    max-width:900px;
+    margin:auto;
+    color:#ccc;
+}
+
+.edu-item,
+.exp-item{
+    background:#121212;
+    margin-bottom:15px;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #1f1f1f;
+    transition:0.3s;
+}
+
+.edu-item:hover,
+.exp-item:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,110,196,0.3);
+}
+
+.edu-item h4,
+.exp-item h4{
+    background:linear-gradient(90deg,#ff6ec4,#7873f5);
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:5px;
+}
+
+.edu-item p,
+.exp-item p{
+    color:#bbb;
+}
+
+
+/* ===== PROJECTS ===== */
+.cards{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#121212;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #1f1f1f;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,110,196,0.3);
+}
+
+.card h3{
+    background:linear-gradient(90deg,#ff6ec4,#7873f5);
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#bbb;
+}
+
+.card span{
+    display:inline-block;
+    margin:5px 5px 0 0;
+    padding:5px 10px;
+    border-radius:20px;
+    background:rgba(255,110,196,0.2);
+    color:#ff6ec4;
+    font-size:12px;
+}
+
+
+/* ===== PROJECT BUTTONS ===== */
+.project-btn{
+    display:inline-block;
+    margin-top:18px;
+    margin-right:8px;
+    padding:9px 18px;
+    border:1px solid #ff6ec4;
+    border-radius:25px;
+    color:#ff6ec4;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.project-btn:hover{
+    background:linear-gradient(90deg,#ff6ec4,#7873f5);
+    color:#fff;
+    box-shadow:0 0 15px rgba(255,110,196,0.7);
+}
+
+
+/* ===== SKILLS ===== */
+.skills{
+    margin-top:35px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill-btn{
+    padding:10px 22px;
+    background:transparent;
+    border:2px solid #ff6ec4;
+    color:#ff6ec4;
+    border-radius:25px;
+    cursor:pointer;
+    box-shadow:0 0 10px rgba(255,110,196,0.4);
+    transition:0.3s;
+}
+
+.skill-btn:hover{
+    background:linear-gradient(90deg,#ff6ec4,#7873f5);
+    color:#fff;
+    box-shadow:0 0 25px rgba(255,110,196,0.9);
+    transform:translateY(-3px);
+}
+
+
+/* ===== CONTACT ===== */
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    display:inline-block;
+    margin:10px;
+    padding:12px 25px;
+    border:2px solid #ff6ec4;
+    color:#ff6ec4;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.contact a:hover{
+    background:linear-gradient(90deg,#ff6ec4,#7873f5);
+    color:#fff;
+    box-shadow:0 0 20px #ff6ec4;
+}
+
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#0a0a0a;
+    color:#777;
+    font-size:14px;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ===== HEADER ===== -->
+
+<header>
+
+<div class="nav-container">
+
+<div class="logo">
+    Sneha Latha <span>Vandavasi</span>
+</div>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#internship">Internship</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<a href="#contact" class="cta-btn">
+    Get In Touch
+</a>
+
+</div>
+
+</header>
+
+
+<!-- ===== HERO ===== -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>
+    Hi, I'm <span>Sneha Latha Vandavasi</span>
+</h1>
+
+<h3>
+    CSE (AI) Graduate | Full Stack Intern @ 10xAISchool | AI Enthusiast
+</h3>
+
+<p>
+    Currently working on real-world web and AI projects, building practical
+    solutions with Python, FastAPI, and modern web technologies.
+</p>
+
+<a href="#contact" class="hero-btn">
+    Get In Touch
+</a>
+
+<a href="#projects" class="hero-btn">
+    View My Work
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ===== ABOUT ===== -->
+
+<section class="about" id="about">
+
+<h2>About Me</h2>
+
+<p>
+    Computer Science Engineering (Artificial Intelligence) graduate currently
+    working as a Full Stack Intern at 10xAISchool. I have hands-on experience
+    in Python, FastAPI, web development, and AI technologies. I enjoy building
+    practical applications, learning new technologies, and solving real-world
+    problems.
+</p>
+
+</section>
+
+
+<!-- ===== EDUCATION ===== -->
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="edu-exp">
+
+<div class="edu-item">
+
+<h4>
+    B.Tech in CSE (AI) | Chaitanya Bharathi Institute Of Technology | 2022 - 2026
+</h4>
+
+<p>
+    CGPA: 8.76
+</p>
+
+</div>
+
+
+<div class="edu-item">
+
+<h4>
+    Intermediate (MPC) | Sri Gouri Sankar Junior College | 2020 - 2022
+</h4>
+
+<p>
+    Percentage: 83.8%
+</p>
+
+</div>
+
+
+<div class="edu-item">
+
+<h4>
+    SSC | MPL High School | 2019 - 2020
+</h4>
+
+<p>
+    Percentage: 95.3%
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===== INTERNSHIP / EXPERIENCE ===== -->
+
+<section id="internship">
+
+<h2>Internship Experience</h2>
+
+<div class="edu-exp">
+
+<div class="exp-item">
+
+<h4>
+    Full Stack Intern
+</h4>
+
+<p>
+    10xAISchool | 2026 - Present
+</p>
+
+<p>
+    Working on real-world web development projects and gaining hands-on
+    experience in Python, FastAPI, frontend development, and AI technologies.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===== PROJECTS ===== -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="cards">
+
+
+<!-- PROJECT 1 -->
+
+<div class="card">
+
+<h3>
+    DSA Task Monitoring System
+</h3>
+
+<p>
+    Full-stack task management platform for task assignment, progress
+    tracking, and user performance monitoring.
+</p>
+
+<span>React.js</span>
+<span>FastAPI</span>
+<span>Supabase</span>
+<span>Python</span>
+
+<div>
+
+<a
+    href="https://github.com/sneha5476/DSA-task-mointoring"
+    target="_blank"
+    class="project-btn"
+>
+    GitHub Repo
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 2 -->
+
+<div class="card">
+
+<h3>
+    Automated Resume Parser & JD Matcher
+</h3>
+
+<p>
+    AI-powered application that analyzes resumes and job descriptions,
+    calculates skill-match scores, identifies skill gaps, and provides
+    personalized improvement suggestions.
+</p>
+
+<span>Python</span>
+<span>Google Gemini</span>
+<span>AI</span>
+
+<div>
+
+<a
+    href="https://github.com/sneha5476/Automated-Resume-Parser-JD-Matcher"
+    target="_blank"
+    class="project-btn"
+>
+    GitHub Repo
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 3 -->
+
+<div class="card">
+
+<h3>
+    RAG-Based Multi-Document AI Assistant
+</h3>
+
+<p>
+    AI-powered assistant that allows users to upload multiple PDF and TXT
+    documents and receive context-aware answers with relevant source
+    document and page references.
+</p>
+
+<span>Python</span>
+<span>LangChain</span>
+<span>Google Gemini</span>
+<span>FAISS</span>
+
+<div>
+
+<a
+    href="https://github.com/sneha5476/RAG-Based-Multi-Document-Assistant"
+    target="_blank"
+    class="project-btn"
+>
+    GitHub Repo
+</a>
+
+</div>
+
+</div>
+
+<!-- PROJECT 4 -->
+
+<div class="card">
+
+<h3>
+    Blog Management System
+</h3>
+
+<p>
+    Web-based blog management application that allows users to browse
+    blog posts, search for articles, explore categories, and access
+    login and registration features.
+</p>
+
+<span>Python</span>
+<span>Django</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>SQLite</span>
+
+<div>
+
+<a
+    href="https://snehalatha.pythonanywhere.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="project-btn"
+>
+    Live Demo
+</a>
+
+<a
+    href="https://github.com/sneha5476/blog-management-system.git"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="project-btn"
+>
+    GitHub Repo
+</a>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ===== SKILLS ===== -->
+
+<section id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+
+<button class="skill-btn">
+    Python
+</button>
+
+<button class="skill-btn">
+    FastAPI
+</button>
+
+<button class="skill-btn">
+    Django
+</button>
+
+<button class="skill-btn">
+    HTML
+</button>
+
+<button class="skill-btn">
+    CSS
+</button>
+<button class="skill-btn">
+    JavaScript
+</button>
+
+<button class="skill-btn">
+    Reactjs
+</button>
+
+<button class="skill-btn">
+    MySQL
+</button>
+
+
+<button class="skill-btn">
+    Generative AI
+</button>
+
+<button class="skill-btn">
+    RAG
+</button>
+
+<button class="skill-btn">
+    LLMs
+</button>
+
+<button class="skill-btn">
+    Prompt Engineering
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ===== CONTACT ===== -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Me</h2>
+
+<a href="mailto:snehalatha7686@gmail.com">
+    Email
+</a>
+
+<a
+    href="https://github.com/sneha5476"
+    target="_blank"
+>
+    GitHub
+</a>
+
+<a
+    href="https://www.linkedin.com/in/vandavasi-snehalatha-0b1185264"
+    target="_blank"
+>
+    LinkedIn
+</a>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+© 2026 Sneha Latha Vandavasi | Portfolio
+
+</footer>
+
+
+</body>
+</html>
